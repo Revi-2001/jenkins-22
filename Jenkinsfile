@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GOOGLE_CREDENTIALS = credentials('gcp-service-account') // Reference the ID of your credentials
+        GOOGLE_CREDENTIALS = credentials('gcp-key') // Reference the ID of your credentials
     }
 
     parameters {
@@ -13,7 +13,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the repository from GitHub
-                git branch: 'main', url: 'https://github.com/Revi-2001/jenkins-pipeline.git'
+                git branch: 'main', url: 'https://github.com/Revi-2001/jenkins-22.git'
             }
         }
 
